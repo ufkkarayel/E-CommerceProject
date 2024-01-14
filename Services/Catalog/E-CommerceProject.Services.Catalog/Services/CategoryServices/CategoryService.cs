@@ -19,9 +19,10 @@ namespace E_CommerceProject.Services.Catalog.Services.CategoryServices
             _mapper = mapper;
         }
 
-        public Task CreateCategoryAsync(CreateCategoryDto createCategoryDto)
+        public async Task CreateCategoryAsync(CreateCategoryDto createCategoryDto)
         {
-            throw new NotImplementedException();
+            var value = _mapper.Map<Category>(createCategoryDto);
+            await _categoryCollection.InsertOneAsync(value);
         }
 
         public Task DeleteCategoryAsync(string id)
