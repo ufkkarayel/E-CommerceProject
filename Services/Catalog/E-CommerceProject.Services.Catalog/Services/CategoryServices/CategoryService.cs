@@ -25,9 +25,9 @@ namespace E_CommerceProject.Services.Catalog.Services.CategoryServices
             await _categoryCollection.InsertOneAsync(value);
         }
 
-        public Task DeleteCategoryAsync(string id)
+        public async Task DeleteCategoryAsync(string id)
         {
-            throw new NotImplementedException();
+            var values = await _categoryCollection.DeleteOneAsync(x => x.CategoryID == id);
         }
 
         public Task<List<ResultCategoryDto>> GetAllCategoryAsync()
