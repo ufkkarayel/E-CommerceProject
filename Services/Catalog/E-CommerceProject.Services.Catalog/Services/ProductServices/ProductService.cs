@@ -25,24 +25,27 @@ namespace E_CommerceProject.Services.Catalog.Services.ProductServices
             await _productCollection.InsertOneAsync(values);
         }
 
-        public Task DeleteProductAsync(string id)
+        public async Task DeleteProductAsync(string id)
         {
-            throw new NotImplementedException();
+            await _productCollection.DeleteOneAsync(x=>x.ProductID==id);
         }
 
-        public Task<List<ResultProductDto>> GetAllProductsAsync()
+        public async Task<List<ResultProductDto>> GetAllProductsAsync()
         {
-            throw new NotImplementedException();
+            var values = await _productCollection.Find(x=>true).ToListAsync();
+            return _mapper.Map<List<ResultProductDto>>(values);
         }
 
-        public Task<ResultProductDto> GetProductAsync(string id)
+        public async Task<ResultProductDto> GetProductAsync(string id)
         {
-            throw new NotImplementedException();
+            var values = await _productCollection.Find(x => x.ProductID == id).FirstOrDefaultAsync();
+            return _mapper.Map<ResultProductDto>(values);
         }
 
-        public Task UpdateProductAsync(UpdateProductDto updateProductDto)
+        public async Task UpdateProductAsync(UpdateProductDto updateProductDto)
         {
-            throw new NotImplementedException();
+            var values= _mapper.Map<Product>(updateProductDto);
+            await _productCollection.FindOneAndReplaceAsync(x => x.ProductID == updateProductDto.ProductID, values);
         }
     }
 }
