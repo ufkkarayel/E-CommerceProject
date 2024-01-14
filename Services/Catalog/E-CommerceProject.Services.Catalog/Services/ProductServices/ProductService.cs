@@ -19,9 +19,10 @@ namespace E_CommerceProject.Services.Catalog.Services.ProductServices
             _mapper = mapper;
         }
 
-        public Task CreateProductAsync(CreateProductDto createProductDto)
+        public async Task CreateProductAsync(CreateProductDto createProductDto)
         {
-            throw new NotImplementedException();
+            var values= _mapper.Map<Product>(createProductDto);
+            await _productCollection.InsertOneAsync(values);
         }
 
         public Task DeleteProductAsync(string id)
