@@ -1,6 +1,6 @@
 ﻿namespace E_CommerceProject.Services.Catalog.Settings
 {
-    public class DatabaseSettings
+    public class DatabaseSettings : IDatabaseSettings
     {
         public string CategoryCollectionName { get; set; }
         public string ProductCollectionName { get; set; }
