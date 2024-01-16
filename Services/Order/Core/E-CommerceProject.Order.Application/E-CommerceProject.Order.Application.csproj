@@ -8,12 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\CQRS\Commands\" />
-    <Folder Include="Features\CQRS\Handlers\" />
     <Folder Include="Features\Mediator\Commands\" />
     <Folder Include="Features\Mediator\Handlers\" />
     <Folder Include="Features\Mediator\Results\" />
     <Folder Include="Features\Mediator\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E-CommerceProject.Order.Domain\E-CommerceProject.Order.Domain.csproj" />
   </ItemGroup>
 
 </Project>
