@@ -9,12 +9,12 @@ namespace E_CommerceProject.Discount.Services
     public class DiscountService : IDiscountService
     {
         private readonly DapperContext _context;
-        private readonly IMapper _mapper;
+        
 
-        public DiscountService(DapperContext context, IMapper mapper)
+        public DiscountService(DapperContext context)
         {
             _context = context;
-            _mapper = mapper;
+            
         }
 
         public async Task CreateCouponAsync(CreateCouponDto createCouponDto)
