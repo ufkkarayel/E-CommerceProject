@@ -31,9 +31,15 @@ namespace E_CommerceProject.Discount.Services
             }
         }
 
-        public Task DeleteCouponAsync(int id)
+        public async Task DeleteCouponAsync(int id)
         {
-            throw new NotImplementedException();
+            string query = "Delete From Coupon Where CouponID=@couponID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@couponID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
         }
 
         public Task<ResultCouponDto> GetCouponsById(int id)
