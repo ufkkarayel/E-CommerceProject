@@ -19,7 +19,7 @@ namespace E_CommerceProject.Discount.Services
 
         public async Task CreateCouponAsync(CreateCouponDto createCouponDto)
         {
-            string query = "insert into Coupon (Code, Rate, IsActive, ValidDate) values(@code, @rate, @isActive, @validDate)";
+            string query = "insert into Coupons (Code, Rate, IsActive, ValidDate) values(@code, @rate, @isActive, @validDate)";
             var parameters = new DynamicParameters();
             parameters.Add("@code", createCouponDto.Code);
             parameters.Add("@rate", createCouponDto.Rate);
@@ -33,7 +33,7 @@ namespace E_CommerceProject.Discount.Services
 
         public async Task DeleteCouponAsync(int id)
         {
-            string query = "Delete From Coupon Where CouponID=@couponID";
+            string query = "Delete From Coupons Where CouponID=@couponID";
             var parameters = new DynamicParameters();
             parameters.Add("@couponID", id);
             using (var connection = _context.CreateConnection())
@@ -44,7 +44,7 @@ namespace E_CommerceProject.Discount.Services
 
         public async Task<ResultCouponDto> GetCouponsById(int id)
         {
-            string query = " Select * From Coupon Where CouponID=@couponID";
+            string query = " Select * From Coupons Where CouponID=@couponID";
             var parameters = new DynamicParameters();
             parameters.Add("@couponID", id);
             using (var connection = _context.CreateConnection())
@@ -54,9 +54,14 @@ namespace E_CommerceProject.Discount.Services
             }
         }
 
-        public Task<List<ResultCouponDto>> GetResultCouponsAsync()
+        public async Task<List<ResultCouponDto>> GetResultCouponsAsync()
         {
-            throw new NotImplementedException();
+            string query = "Select * From Coupons";
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryAsync<ResultCouponDto>(query);
+                return values.ToList();
+            }
         }
 
         public Task UpdateCouponAsync(UpdateCouponDto updateCouponDto)
