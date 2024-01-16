@@ -42,9 +42,16 @@ namespace E_CommerceProject.Discount.Services
             }
         }
 
-        public Task<ResultCouponDto> GetCouponsById(int id)
+        public async Task<ResultCouponDto> GetCouponsById(int id)
         {
-            throw new NotImplementedException();
+            string query = " Select * From Coupon Where CouponID=@couponID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@couponID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryFirstOrDefaultAsync<ResultCouponDto>(query,parameters);
+                return values;
+            }
         }
 
         public Task<List<ResultCouponDto>> GetResultCouponsAsync()
