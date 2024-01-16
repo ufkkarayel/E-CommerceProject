@@ -1,6 +1,12 @@
+using E_CommerceProject.Discount.Context;
+using E_CommerceProject.Discount.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<DapperContext>();
+builder.Services.AddScoped<IDiscountService, DiscountService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

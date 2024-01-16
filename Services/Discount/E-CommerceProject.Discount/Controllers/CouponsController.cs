@@ -16,7 +16,7 @@ namespace E_CommerceProject.Discount.Controllers
             _discountService = discountService;
         }
         [HttpGet]
-        public async Task< IActionResult> CouponList() 
+        public async Task<IActionResult> CouponList()
         {
             var values = await _discountService.GetResultCouponsAsync();
             return Ok(values);
@@ -30,7 +30,7 @@ namespace E_CommerceProject.Discount.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCouponAsync(int id)
         {
-            await _discountService.DeleteCouponAsync(id);
+            await _discountService.DeleteCouponAsync(id); 
             return Ok("Kupon silindi");
         }
         [HttpGet("{id}")]
@@ -38,6 +38,12 @@ namespace E_CommerceProject.Discount.Controllers
         {
             var values = await _discountService.GetCouponsById(id);
             return Ok(values);
+        }
+        [HttpPut]
+        public async Task<IActionResult> UpdateCouponAsync(UpdateCouponDto updateCouponDto)
+        {
+            await _discountService.UpdateCouponAsync(updateCouponDto);
+            return Ok("Başarıyla güncellendi");
         }
     }
 }
