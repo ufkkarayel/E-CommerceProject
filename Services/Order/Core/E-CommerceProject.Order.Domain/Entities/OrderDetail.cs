@@ -15,5 +15,6 @@ namespace E_CommerceProject.Order.Domain.Entities
         public int ProductAmount { get; set; }
         public decimal TotalPrice { get; set; }
         public int OrderingID { get; set; }
+        public Ordering Ordering { get; set; }
     }
 }
