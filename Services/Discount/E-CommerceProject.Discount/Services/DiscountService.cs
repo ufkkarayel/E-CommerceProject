@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Dapper;
 using E_CommerceProject.Discount.Context;
 using E_CommerceProject.Discount.Dtos;
 using E_CommerceProject.Discount.Models;
@@ -18,9 +19,16 @@ namespace E_CommerceProject.Discount.Services
 
         public async Task CreateCouponAsync(CreateCouponDto createCouponDto)
         {
-            var values= _mapper.Map<Coupon>(createCouponDto);
-            await _context.Coupons.AddAsync(values);
-            await _context.SaveChangesAsync();
+            string query = "insert into Coupon (Code, Rate, IsActive, ValidDate) values(@code, @rate, @isActive, @validDate)";
+            var parameters = new DynamicParameters();
+            parameters.Add("@code", createCouponDto.Code);
+            parameters.Add("@rate", createCouponDto.Rate);
+            parameters.Add("@isActive", true);
+            parameters.Add("@validDate",createCouponDto.ValidDate);
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.ExecuteAsync(query, parameters);
+            }
         }
 
         public Task DeleteCouponAsync(int id)
