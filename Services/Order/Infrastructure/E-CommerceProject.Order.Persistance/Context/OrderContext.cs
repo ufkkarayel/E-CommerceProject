@@ -13,7 +13,7 @@ namespace E_CommerceProject.Order.Persistance.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB,1433 ;database=ECommerceOrderDb;user=sa;password=Ufk.8385");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB,1450 ;database=ECommerceOrderDb;user=sa;password=123456aA*");
         }
         public DbSet<Ordering> Orderings { get; set; }
         public DbSet<Address> Addresses { get; set; }
