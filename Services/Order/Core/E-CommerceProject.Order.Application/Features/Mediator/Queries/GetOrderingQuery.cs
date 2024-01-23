@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace E_CommerceProject.Order.Application.Features.Mediator.Queries
 {
-    public class GetOrderingQuery : IRequest<GetOrderingQueryResult>
+    public class GetOrderingQuery : IRequest<List<GetOrderingQueryResult>>
     {
 
     }
