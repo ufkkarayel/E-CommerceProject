@@ -10,10 +10,10 @@ namespace E_CommerceProject.Order.Application.Interfaces
     public interface IRepository<T> where T : class
     {
         Task<List<T>> GetAllAsync();
-        Task<T> GetByIdAsync();
-        Task<T> CreateAsync();
-        Task<T> UpdateAsync();
-        Task<T> DeleteAsync();
+        Task<T> GetByIdAsync(int id);
+        Task CreateAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(T entity);
         Task<List<T>> GetOrderByFilter(Expression<Func<T, bool>> filter);
     }
 }
