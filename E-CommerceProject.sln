@@ -41,13 +41,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{86445EB6-D856-4970-9F0F-DBCE6100EAF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-CommerceProject.Order.Domain", "Services\Order\Core\E-CommerceProject.Order.Domain\E-CommerceProject.Order.Domain.csproj", "{8161C3F3-B5B4-4C05-954B-34EB97A1E918}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.Domain", "Services\Order\Core\E-CommerceProject.Order.Domain\E-CommerceProject.Order.Domain.csproj", "{8161C3F3-B5B4-4C05-954B-34EB97A1E918}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-CommerceProject.Order.Application", "Services\Order\Core\E-CommerceProject.Order.Application\E-CommerceProject.Order.Application.csproj", "{A1BEAAA1-4CB1-4EA0-BC28-7BC67349AC2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.Application", "Services\Order\Core\E-CommerceProject.Order.Application\E-CommerceProject.Order.Application.csproj", "{A1BEAAA1-4CB1-4EA0-BC28-7BC67349AC2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-CommerceProject.Order.Persistance", "Services\Order\Infrastructure\E-CommerceProject.Order.Persistance\E-CommerceProject.Order.Persistance.csproj", "{C6CE6172-2D21-490D-A2ED-6F6EB1CBCB92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.Persistance", "Services\Order\Infrastructure\E-CommerceProject.Order.Persistance\E-CommerceProject.Order.Persistance.csproj", "{C6CE6172-2D21-490D-A2ED-6F6EB1CBCB92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-CommerceProject.Order.WebApi", "Services\Order\Presentation\E-CommerceProject.Order.WebApi\E-CommerceProject.Order.WebApi.csproj", "{0D889753-AA64-4BA4-9616-656790FB3237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.WebApi", "Services\Order\Presentation\E-CommerceProject.Order.WebApi\E-CommerceProject.Order.WebApi.csproj", "{0D889753-AA64-4BA4-9616-656790FB3237}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
