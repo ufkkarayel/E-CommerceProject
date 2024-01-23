@@ -14,6 +14,6 @@ namespace E_CommerceProject.Order.Application.Interfaces
         Task CreateAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
-        Task<List<T>> GetOrderByFilter(Expression<Func<T, bool>> filter);
+        Task<T> GetOrderByFilter(Expression<Func<T, bool>> filter);
     }
 }
