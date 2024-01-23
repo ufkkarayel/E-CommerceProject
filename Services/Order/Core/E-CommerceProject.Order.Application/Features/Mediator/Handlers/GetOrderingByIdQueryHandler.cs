@@ -1,5 +1,7 @@
 ﻿using E_CommerceProject.Order.Application.Features.Mediator.Queries;
 using E_CommerceProject.Order.Application.Features.Mediator.Results;
+using E_CommerceProject.Order.Application.Interfaces;
+using E_CommerceProject.Order.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,23 @@ namespace E_CommerceProject.Order.Application.Features.Mediator.Handlers
 {
     public class GetOrderingByIdQueryHandler : IRequestHandler<GetOrderingByIdQuery, GetOrderingByIdQueryResult>
     {
-        public Task<GetOrderingByIdQueryResult> Handle(GetOrderingByIdQuery request, CancellationToken cancellationToken)
+        private readonly IRepository<Ordering> _repository;
+
+        public GetOrderingByIdQueryHandler(IRepository<Ordering> repository)
         {
-            throw new NotImplementedException();
+            _repository = repository;
+        }
+
+        public async Task<GetOrderingByIdQueryResult> Handle(GetOrderingByIdQuery request, CancellationToken cancellationToken)
+        {
+            var values = await _repository.GetByIdAsync(request.Id);
+            return new GetOrderingByIdQueryResult
+            {
+                OrderDate = values.OrderDate,
+                OrderingID = values.OrderingID,
+                TotalPrice = values.TotalPrice,
+                UserID = values.UserID
+            };
         }
     }
 }
