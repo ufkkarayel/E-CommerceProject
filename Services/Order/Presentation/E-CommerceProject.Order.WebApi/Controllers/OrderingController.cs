@@ -9,11 +9,11 @@ namespace E_CommerceProject.Order.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AddressesController : ControllerBase
+    public class OrderingController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public AddressesController(IMediator mediator)
+        public OrderingController(IMediator mediator)
         {
             _mediator = mediator;
         }
