@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\E-CommerceProject.Order.Application\E-CommerceProject.Order.Application.csproj" />
     <ProjectReference Include="..\..\Core\E-CommerceProject.Order.Domain\E-CommerceProject.Order.Domain.csproj" />
     <ProjectReference Include="..\..\Infrastructure\E-CommerceProject.Order.Persistance\E-CommerceProject.Order.Persistance.csproj" />
