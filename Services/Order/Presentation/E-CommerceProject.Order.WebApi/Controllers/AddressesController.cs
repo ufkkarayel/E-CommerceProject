@@ -35,5 +35,17 @@ namespace E_CommerceProject.Order.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Sipariş güncellendi");
         }
+        [HttpGet("{id}")]
+        public  async Task<IActionResult> GerOrdering(int id)
+        {
+            var values = await _mediator.Send(new GetOrderingByIdQuery(id));
+            return Ok(values);
+        }
+        [HttpDelete]
+        public async Task<IActionResult> RemoveOrdering(int id)
+        {
+            await _mediator.Send(new RemoveOrderingCommand(id));
+            return Ok("Sipariş silindi");
+        }
     }
 }
