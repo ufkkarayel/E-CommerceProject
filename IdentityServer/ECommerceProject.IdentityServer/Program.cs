@@ -12,7 +12,7 @@ using Serilog.Sinks.SystemConsole.Themes;
 using System;
 using System.Linq;
 
-namespace E_CommerceProject.IdentityServer
+namespace ECommerceProject.IdentityServer
 {
     public class Program
     {

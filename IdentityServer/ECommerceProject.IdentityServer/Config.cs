@@ -5,7 +5,7 @@
 using IdentityServer4.Models;
 using System.Collections.Generic;
 
-namespace E_CommerceProject.IdentityServer
+namespace ECommerceProject.IdentityServer
 {
     public static class Config
     {

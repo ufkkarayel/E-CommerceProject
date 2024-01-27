@@ -6,14 +6,14 @@ using System;
 using System.Linq;
 using System.Security.Claims;
 using IdentityModel;
-using E_CommerceProject.IdentityServer.Data;
-using E_CommerceProject.IdentityServer.Models;
+using ECommerceProject.IdentityServer.Data;
+using ECommerceProject.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 
-namespace E_CommerceProject.IdentityServer
+namespace ECommerceProject.IdentityServer
 {
     public class SeedData
     {

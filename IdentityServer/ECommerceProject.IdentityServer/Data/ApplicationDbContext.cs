@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using E_CommerceProject.IdentityServer.Models;
+using ECommerceProject.IdentityServer.Models;
 
-namespace E_CommerceProject.IdentityServer.Data
+namespace ECommerceProject.IdentityServer.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

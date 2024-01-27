@@ -3,8 +3,8 @@
 
 
 using IdentityServer4;
-using E_CommerceProject.IdentityServer.Data;
-using E_CommerceProject.IdentityServer.Models;
+using ECommerceProject.IdentityServer.Data;
+using ECommerceProject.IdentityServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace E_CommerceProject.IdentityServer
+namespace ECommerceProject.IdentityServer
 {
     public class Startup
     {
@@ -31,7 +31,7 @@ namespace E_CommerceProject.IdentityServer
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
