@@ -62,6 +62,7 @@ namespace ECommerceProject.IdentityServer
             new Client
             {
 
+
                 ClientId="ECommerceAdminID",
                 ClientName="E Commerce Admin User",
                 AllowedGrantTypes=GrantTypes.ClientCredentials,
