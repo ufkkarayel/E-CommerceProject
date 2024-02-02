@@ -51,6 +51,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceProject.IdentityServer", "IdentityServer\ECommerceProject.IdentityServer\ECommerceProject.IdentityServer.csproj", "{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceProject.Basket", "Services\Basket\ECommerceProject.Basket\ECommerceProject.Basket.csproj", "{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +118,7 @@ Global
 		{C6CE6172-2D21-490D-A2ED-6F6EB1CBCB92} = {092FF548-A760-4514-9F90-63B1893C8139}
 		{0D889753-AA64-4BA4-9616-656790FB3237} = {86445EB6-D856-4970-9F0F-DBCE6100EAF2}
 		{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8} = {65438A9A-DECC-47F8-85E2-31B8DE24D46F}
+		{1A001C3C-90D7-43A9-AC0B-062FA0AA0297} = {8567F573-20B5-409D-A95A-F5C6A79935E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55C5BB0D-E43C-4D83-BD47-CFAF70A0AC30}
