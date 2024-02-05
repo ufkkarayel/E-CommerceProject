@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-CommerceProject.Order.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceProject.IdentityServer", "IdentityServer\ECommerceProject.IdentityServer\ECommerceProject.IdentityServer.csproj", "{79B0EFCD-2ADC-4671-B4C1-F5F645EBFFC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerceProject.Basket", "Services\Basket\ECommerceProject.Basket\ECommerceProject.Basket.csproj", "{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerceProject.Basket", "Services\Basket\ECommerceProject.Basket\ECommerceProject.Basket.csproj", "{1A001C3C-90D7-43A9-AC0B-062FA0AA0297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
